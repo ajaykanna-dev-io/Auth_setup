@@ -43,7 +43,14 @@
                   "kind": "scalar"
                 }
               },
-              "password": {
+              "passwordHash": {
+                "nullable": false,
+                "type": {
+                  "codecId": "pg/text@1",
+                  "kind": "scalar"
+                }
+              },
+              "role": {
                 "nullable": false,
                 "type": {
                   "codecId": "pg/text@1",
@@ -80,8 +87,11 @@
                 "name": {
                   "column": "name"
                 },
-                "password": {
-                  "column": "password"
+                "passwordHash": {
+                  "column": "passwordHash"
+                },
+                "role": {
+                  "column": "role"
                 },
                 "updatedAt": {
                   "column": "updatedAt"
@@ -133,8 +143,17 @@
                   "nativeType": "text",
                   "nullable": true
                 },
-                "password": {
+                "passwordHash": {
                   "codecId": "pg/text@1",
+                  "nativeType": "text",
+                  "nullable": false
+                },
+                "role": {
+                  "codecId": "pg/text@1",
+                  "default": {
+                    "kind": "literal",
+                    "value": "USER"
+                  },
                   "nativeType": "text",
                   "nullable": false
                 },
@@ -161,6 +180,11 @@
                   "columns": [
                     "email"
                   ]
+                },
+                {
+                  "columns": [
+                    "username"
+                  ]
                 }
               ]
             }
@@ -170,7 +194,7 @@
         "kind": "postgres-schema"
       }
     },
-    "storageHash": "b42236b376bf2c29fc84d889c50247d3115305c3f4dbb75c1b7985da68ccc47d"
+    "storageHash": "766d9354fba34d61f3d2706e6fe7e2d070791a93d975edbbdfbb1d842ce333c4"
   },
   "execution": {
     "executionHash": "a499031370d1fd1891ca11072d3f7e11be752b686057f7c6d0900ee0159f4ed0",

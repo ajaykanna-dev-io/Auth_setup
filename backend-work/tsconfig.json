@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "preserve",
-    "moduleResolution": "bundler",
-    "resolvePackageJsonExports": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "./",
     "esModuleInterop": true,
     "isolatedModules": true,
     "declaration": true,
@@ -22,10 +22,5 @@
     "strict": true,
     "strictPropertyInitialization": false,
     "resolveJsonModule": true
-  },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "prisma.config.ts"
-  ]
+  }
 }
